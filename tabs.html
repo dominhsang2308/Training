@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial;
+      }
+
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tabs</h2>
+    <p>Click on the buttons inside the tabbed menu:</p>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')">
+        Hướng dẫn tạo đường dẫn đến trang web
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">OOP IMPLEMENT AND EXTENDS</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Union Type</button>
+      <button class="tablinks" onclick="openCity(event, 'controlflow')">Control Flow Type and Project CONFIG</button>
+      <button class="tablinks" onclick="openCity(event, 'arrow')">ARROW FUNCTION</button>
+      <button class="tablinks" onclick="openCity(event, 'tinhdahinh')">TÍNH ĐA HÌNH CỦA ARROW</button>
+      <button class="tablinks" onclick="openCity(event, 'equal')">TÁC DỤNG CỦA DẤU BẰNG</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+      <h1>Hướng dẫn tạo đường dẫn đến trang web</h1>
+      <p>mỗi module có nhiều component, mỗi component có 1 link riêng</p>
+      <img src="cay thu muc.png" />
+      <p>Hiển thị trang web dựa vào router</p>
+      <img src="popup trang web bang router.png" width="300px" />
+      <p>mỗi module có nhiều component, mỗi component có 1 link riêng</p>
+      <img src="module.png" />
+      <p>Dẫn đến RounterModule</p>
+      <img src="forchildroutermodule.png" />
+      <p>Dẫn đến link chưa component</p>
+      <img src="duongdandentrangweb.png" />
+      <p>API REST</p>
+      <p>B1 : lấy</p>
+      <p>B2 : Hứng</p>
+      <p>B3 : hiện</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+      <h1>OOP IMPLEMENT AND EXTENDS</h1>
+      <img src="OOP implement and extends.png" />
+      <div style="background-color: #c4c4c4; height: 300px; overflow: auto">
+        <pre>
+              <code>
+                  import { Mircosoft } from "./microsoft.interface";
+  
+  interface IBM {
+    ib: string;
+  }
+  
+  abstract class Power implements Mircosoft, IBM {
+    home: number;
+    ib: string;
+    abstract author: string;
+  
+    fly?(): void;
+  
+    abstract fight(): void;
+  }
+  
+  class IronMan extends Power {
+    author: string;
+  //   fly(): void {
+  //     throw new Error("Method not implemented.");
+  //   }
+    fight(): void {
+      throw new Error("Method not implemented.");
+    }
+    run(): void {}
+  }
+  class Captain implements IronMan {
+    home: number;
+    ib: string;
+    run(): void {
+      throw new Error("Method not implemented.");
+    }
+    author: string;
+    fly(): void {
+      throw new Error("Method not implemented.");
+    }
+    fight(): void {
+      throw new Error("Method not implemented.");
+    }
+  }
+  let cap: Captain;
+  cap = new Captain();
+  cap.fight();
+  cap.fly();
+  cap.run();
+  cap.author;
+  cap.ib;
+  cap.home;
+              </code>
+          </pre>
+    </div>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+      <h1> Union Type</h1>
+      <pre>
+        <code>
+          declare let userInput: string | number | boolean
+          userInput = userInput = 2 || "conga" || false;
+          alert(userInput);
+          if(typeof userInput ==="string"){
+            userInput;
+            alert(userInput)
+          }else if(typeof userInput==="number"){
+            userInput;
+          }else{
+            userInput;
+          }
+          
+          userInput = false;
+          if(typeof userInput === "string"){
+            userInput;
+            alert(userInput)
+          }else if(typeof userInput==="number"){
+            userInput;
+          }else{
+            userInput;
+          }
+          userInput = "";
+          if(typeof userInput ==="string"){
+            userInput;
+            alert(userInput)
+          }else if(typeof userInput==="number"){
+            userInput;
+          }else{
+            userInput;
+            alert(userInput)
+          }
+          userInput = ' ahsdhas';
+          if(typeof userInput ==="string"){
+            userInput;
+            alert(userInput)
+          }else if(typeof userInput==="number"){
+            userInput;
+          }else{
+            userInput;
+            alert(userInput)
+          }
+        </code>
+      </pre>
+    </div>
+    <div id="controlflow" class="tabcontent">
+      <h1>Control Flow Type</h1>
+      <p>Kết luận : giảm thiểu bug, tiết kiệm thời gian, code sáng dễ hiểu</p>
+      <br />
+      <p>mình tự định nghĩa kiểu, còn lại việc của TS</p>
+      <p>kí hiệu : |</p>
+      <br />
+      <p>tên tiếng anh : union type</p>
+      <h1>Cách vận hành của gạch đứng</h1>
+      <p>giữ lại phần điều kiện - chỉ thay đổi phần giá trị</p>
+      <pre>
+
+        <h1>PROJECT CONFIG</h1>
+        <h1>Cần Nhớ</h1>
+        <p> version of JS</p>
+        <p>Type Checking : strict</p>
+        <p> watch :true</p>
+        <h1>CONFIG file từ bên ngoài vào project</h1>
+        <h1> CẦN NHỚ </h1>
+        <p>kế thừa : extends</p>
+        <p>compilerOptions: các thuộc tính của compilerOptions</p>
+        <p>include: bắt đầu tìm kiếm thư mục/tìm đệ quy tất cả thư mục con/ tìm tất cả file kết thúc bằng .ts</p>
+        <h1> BUNDLE</h1>
+        <p> Ghi nhớ vào bộ nhớ của trình duyệt, không hiển thị file trong cây thư mục</p>
+    </div>
+    <div id="arrow" class="tabcontent">
+      <h1> Arrow Funiction</h1>
+        <h1>Sự giống nhau và khác nhau giữa Arrow và Traditional Function</h1>>
+        <h1>Khác nhau</h1> 
+        <p> Arrow Funiction Khai báo không cần thực thi</p>
+        <p>Viết ngắn hơn Function truyền thống</p>
+        <h1>Giống Nhau</h1>
+        <p>Đều có kiểu dữ liệu đầu vào ( parameter ) và cùng cơ chế type anotation checking cả đầu vào và ra , return value function (dữ liệu đầu ra )</p>
+        <h1> Cú Pháp Arrow Function</h1>
+        <code>let logger:(score:string) => void;(Loại khai báo chưa sử dụng ) </code>
+        <code>  let logError = (error:string="log error default"):void =>{ 
+            console.error(error);
+        }; (Đang sử dụng )</code>
+        <h2>function name  =   (parameter) : type  => { body function}</h2>
+    </div>
+    <div id="tinhdahinh" class="tabcontent">
+      <h1>Tính đa hình của Arrow Function</h1>
+        <pre>
+          <code>
+            <code>
+              let checkscore = ():void =>{
+                let score:number = getScore();
+                let logger:(score:string) => void;
+                check score
+                if(score< 0){
+                  logger = logError;
+                }else{
+                  logger = logMessage;
+                }
+                logger(`Score ${score}`);
+              }
+            </code>
+            <code>
+              let logger: (score: string) => void;
+      // check score
+      if (score < 0) {
+        logger = logError;
+      } else {
+        logger = logMessage;
+      }
+      logger(`Score ${score}`);
+            </code>
+          </code>
+        </pre>
+    </div>
+    <div id="equal" class="tabcontent">
+      <h1> Tác dụng của dấu = </h1>
+        <p>Lữu trữ dữ liệu trong vùng nhớ mới</p>
+        <img src="Screenshot 2022-04-14 164450.png">
+        <h1>Ý nghĩa của dấu bằng </h1>
+        <p> <del>Làm vế bên phải giống vế bên trái</u></p>
+        <h2>Equal is copy data from right-hand side save to left-hand side  </h2>
+        <img src="daubang.png">
+    </div>
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
